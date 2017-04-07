@@ -1,4 +1,12 @@
+set input-meta on
+set output-meta on
+set convert-meta off
+
 ## arrow up
 "\e[A":history-search-backward
 ## arrow down
 "\e[B":history-search-forward
+
+# Option + Arrows to jump words.
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
