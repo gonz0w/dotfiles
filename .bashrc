@@ -16,8 +16,8 @@ alias moogstat='service moogfarmd status'
 alias vi='vim'
 alias hist='history'
 alias dumprestlam='tcpdump -c 20 -s 0 -A tcp port 8888'
- alias ports='netstat -nape --inet'
- alias opennet='lsof -i'
+alias ports='netstat -nape --inet'
+alias opennet='lsof -i'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -62,18 +62,3 @@ export PROMPT_COMMAND='history -a'
 
 
 PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[00;34m\]{\[\033[01;34m\]\w\[\033[00;34m\]}\[\033[01;32m\]:\[\033[00m\]'
-
-upinfo ()
-{
-echo -ne "${green}$HOSTNAME ${red}uptime is ${cyan}  ";uptime | awk /'up/ {print $3,$4,$5,$6,$7,$8,$9,$10}'
-}
-
-#------------------------------------------////
-# System Information:
-#------------------------------------------////
-clear
-echo -e "${LIGHTGRAY}";figlet -f slant "MOOGSOFT";
-echo -ne "${RED}Today is:\t\t${cyan}" `date`; echo ""
-echo -e "${RED}Kernel Information: \t${cyan}" `uname -smr`
-echo -ne "${CYAN}";upinfo;echo ""
-echo -e "${CYAN}"; cal -3
