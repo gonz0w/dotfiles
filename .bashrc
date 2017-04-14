@@ -24,6 +24,10 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
+if [ -f /etc/bash_completion ]; then
+ . /etc/bash_completion
+fi
+
 export MOOGSOFT_HOME=/usr/share/moogsoft
 export JAVA_HOME=/usr/java/latest
 export APPSERVER_HOME=/usr/share/apache-tomcat
