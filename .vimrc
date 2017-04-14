@@ -14,10 +14,8 @@ set showmatch                   " show matching
 set paste
 set mouse=a
 set history=1000
-"set spell
 set backup                      " backups are nice ...
 set nowrap                      " wrap long lines
-set autoindent                  " indent at the same level of the prev line
 set shiftwidth=4                " use indents of 4 spaces
 set expandtab                   " tabs are spaces, not tabs
 set tabstop=4                   " an indentation every four columns
@@ -28,11 +26,9 @@ set wildmenu
 " Plugins to load
 
 call plug#begin('~/.vim/plugged')
-Plug 'Valloric/YouCompleteMe'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -61,19 +57,8 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=233
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=234
 
 
-" check syntax of your code to make sure it works.
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-
 " Tagbar toggle
 nmap <Leader>tt :TagbarToggle<cr>
-
-
-
-
 
 function! InitializeDirectories()
    let separator = "."
