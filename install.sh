@@ -5,9 +5,11 @@ sudo yum install wget etags-ctags figlet vim lsof htop bash-completion tcpdump -
 source ~/.bashrc
 bind -f ~/.inputrc
 cd ~/.vim
-mkdir autoload
+mkdir autoload && cd autoload
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugInstall +qall
+cd ~
+rm -rf dotfiles
 
 
 
