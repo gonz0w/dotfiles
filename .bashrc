@@ -5,6 +5,7 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias more='less'
 alias cowtail='multitail -f /var/log/moogsoft/moogfarmd.log'
 alias moog='cd $MOOGSOFT_HOME'
 alias bots='cd $MOOGSOFT_HOME/bots'
@@ -63,6 +64,7 @@ export HISTSIZE=100000
 shopt -s checkwinsize
 shopt -s histappend
 export PROMPT_COMMAND='history -a'
-
+export LESS='-R'
+export LESSOPEN='|~/.lessfilter %s'
 
 PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[00;34m\]{\[\033[01;34m\]\w\[\033[00;34m\]}\[\033[01;32m\]:\[\033[00m\]'
