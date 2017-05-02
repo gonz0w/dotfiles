@@ -12,7 +12,7 @@ set ts=2 sw=2 et
 set nu                          " Line numbers on
 set showmatch                   " show matching
 set paste
-set mouse=a
+"set mouse=a
 set history=1000
 set backup                      " backups are nice ...
 set nowrap                      " wrap long lines
