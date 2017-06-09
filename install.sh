@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mv .* ~
-sudo yum install wget etags-ctags figlet vim lsof htop bash-completion tcpdump -y
+sudo yum install wget etags-ctags figlet vim lsof htop bash-completion telnet nc psmisc tcpdump -y
 source ~/.bashrc
 bind -f ~/.inputrc
 cd ~/.vim
