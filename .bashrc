@@ -33,6 +33,8 @@ export MOOGSOFT_HOME=/usr/share/moogsoft
 export JAVA_HOME=/usr/java/latest
 export APPSERVER_HOME=/usr/share/apache-tomcat
 export PATH=$PATH:$MOOGSOFT_HOME/bin:$MOOGSOFT_HOME/bin/utils
+export TERM=xterm-256color
+
 
 
 # Set some colors
