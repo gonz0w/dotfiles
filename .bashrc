@@ -70,3 +70,18 @@ export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
 
 PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[00;34m\]{\[\033[01;34m\]\w\[\033[00;34m\]}\[\033[01;32m\]:\[\033[00m\]'
+welcome() {
+    #------------------------------------------
+    #------WELCOME MESSAGE---------------------
+    # customize this first message with a message of your choice.
+    # this will display the username, date, time, a calendar, the amount of users, and the up ti
+    #clear
+    # Gotta love ASCII art with figlet
+    figlet "Welcome, " $USER;
+    echo -e ""; cal ;
+    echo -ne "Today is "; date #date +"Today is %A %D, and it is now %R"
+    echo -e ""
+    echo -ne "Up time:";uptime | awk /'up/'
+    echo "";
+}
+[[ $- == *i* ]] && welcome  
