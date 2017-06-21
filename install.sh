@@ -1,6 +1,9 @@
 #!/bin/bash
 
-mv .* ~
+cp .bashrc ~
+cp .inputrc ~
+cp -r .vim ~
+cp .vimrc ~
 sudo yum install wget etags-ctags figlet vim lsof htop bash-completion telnet nc psmisc tcpdump bind-utils -y
 source ~/.bashrc
 bind -f ~/.inputrc
