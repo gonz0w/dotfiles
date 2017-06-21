@@ -5,7 +5,7 @@
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias more='view -M'
+alias more='less'
 alias cowtail='tail -f /var/log/moogsoft/moogfarmd.log'
 alias moog='cd $MOOGSOFT_HOME'
 alias bots='cd $MOOGSOFT_HOME/bots'
