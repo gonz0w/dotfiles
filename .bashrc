@@ -19,6 +19,7 @@ alias hist='history'
 alias dumprestlam='tcpdump -c 20 -s 0 -A tcp port 8888'
 alias ports='netstat -nape --inet'
 alias opennet='lsof -i'
+alias catalina='tail -f /usr/share/apache-tomcat/logs/catalina.out'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
