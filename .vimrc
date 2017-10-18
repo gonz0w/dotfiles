@@ -32,6 +32,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plugin 'maksimr/vim-jsbeautify'
+
 call plug#end()
 
 
