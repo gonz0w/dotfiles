@@ -49,7 +49,7 @@ set statusline+=%*
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-map <c-f> :call JsBeautify()<cr>
+map <c-j> :call JsBeautify()<cr>
 
 "  Indent settings to show level of indentions
 
