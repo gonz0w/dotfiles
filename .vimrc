@@ -10,12 +10,12 @@ hi CursorColumn guibg=\#333333   " highlight cursor
 set ts=2 sw=2 et
 
 set nu                          " Line numbers on
+set wrap
+set ignorecase
 set showmatch                   " show matching
 set paste
-"set mouse=a
 set history=1000
-set backup                      " backups are nice ...
-set nowrap                      " wrap long lines
+set backup                      " backups are nice 
 set shiftwidth=4                " use indents of 4 spaces
 set expandtab                   " tabs are spaces, not tabs
 set tabstop=4                   " an indentation every four columns
