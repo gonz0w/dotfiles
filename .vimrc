@@ -1,7 +1,7 @@
 
 " General Vim configuration first
 syntax enable
-color distinguished
+color candy
 set background=dark
 set t_Co=256
 set cursorline                  " highlight current line
