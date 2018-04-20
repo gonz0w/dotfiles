@@ -5,7 +5,8 @@ cp .inputrc ~
 cp -r .vim ~
 cp .vimrc ~
 cp .lessfilter ~
-sudo yum install unzip wget etags-ctags figlet vim lsof htop bash-completion telnet nc psmisc tcpdump bind-utils nodejs -y
+sudo yum install unzip wget etags-ctags figlet vim lsof htop bash-completion telnet nc psmisc tcpdump bind-utils nodejs npm -y
+sudo npm install -g jshint
 wget https://github.com/beautify-web/js-beautify/archive/master.zip && unzip master.zip && cp -rf js-beautify-master/js ~/.vim/plugin/lib/
 cd ~/.vim
 mkdir autoload && cd autoload
