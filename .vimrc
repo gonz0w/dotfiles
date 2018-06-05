@@ -35,7 +35,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'scrooloose/nerdtree'
 Plug 'ervandew/supertab'
-
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 
