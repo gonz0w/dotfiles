@@ -6,8 +6,8 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias more='less'
-alias mconfiog='cd /usr/share/moogsoft/config'
-alias cowtail='tail -f /var/log/moogsoft/moogfarmd.log'
+alias mconfig='cd /usr/share/moogsoft/config'
+alias cowtail='tail -f /var/log/moogsoft/moogfarmd.log | ccze -m ansi'
 alias moog='cd $MOOGSOFT_HOME'
 alias bots='cd $MOOGSOFT_HOME/bots'
 alias lams='cd $MOOGSOFT_HOME/lams'
@@ -73,6 +73,11 @@ export LESS='-R'
 export LESSOPEN='|~/.lessfilter %s'
 
 PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[00;34m\]{\[\033[01;34m\]\w\[\033[00;34m\]}\[\033[01;32m\]:\[\033[00m\]'
+
+check_config() {
+   cat $1 | sed -e '/^\s*#/d' | sed '/^\s*$/d' | ccze -m ansi
+}
+
 welcome() {
     #------------------------------------------
     #------WELCOME MESSAGE---------------------
