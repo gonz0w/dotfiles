@@ -22,6 +22,7 @@ alias ports='netstat -nape --inet'
 alias opennet='lsof -i'
 alias catalina='tail -f /usr/share/apache-tomcat/logs/catalina.out'
 alias phantomfiles='lsof -s | grep deleted | sort -k 8'
+alias health='grep CFarmdHealth /var/log/moogsoft/moogfarmd.log | tail -1 | cut -d "|" -f2 | cut -d "|" -f1 | jq'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
