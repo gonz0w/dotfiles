@@ -6,23 +6,9 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias more='less'
-alias mconfig='cd /usr/share/moogsoft/config'
-alias cowtail='tail -f /var/log/moogsoft/moogfarmd.log | ccze -m ansi'
-alias moog='cd $MOOGSOFT_HOME'
-alias bots='cd $MOOGSOFT_HOME/bots'
-alias lams='cd $MOOGSOFT_HOME/lams'
-alias moogstart='service moogfarmd start'
-alias moogrestart='service moogfarmd restart'
-alias moogstop='service moogfarmd stop'
-alias moogstat='service moogfarmd status'
 alias vi='vim'
 alias hist='history'
-alias dumprestlam='tcpdump -c 20 -s 0 -A tcp port 8888'
-alias ports='netstat -nape --inet'
-alias opennet='lsof -i'
-alias catalina='tail -f /usr/share/apache-tomcat/logs/catalina.out'
 alias phantomfiles='lsof -s | grep deleted | sort -k 8'
-alias health='grep CFarmdHealth /var/log/moogsoft/moogfarmd.log | tail -1 | cut -d "|" -f2 | cut -d "|" -f1 | jq'
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -33,10 +19,7 @@ if [ -f /etc/bash_completion ]; then
  . /etc/bash_completion
 fi
 
-export MOOGSOFT_HOME=/usr/share/moogsoft
-export JAVA_HOME=/usr/java/latest
-export APPSERVER_HOME=/usr/share/apache-tomcat
-export PATH=$PATH:$MOOGSOFT_HOME/bin:$MOOGSOFT_HOME/bin/utils
+
 export TERM=xterm-256color
 
 
@@ -75,9 +58,6 @@ export LESSOPEN='|~/.lessfilter %s'
 
 PS1='\[\033[01;32m\]\u\[\033[01;34m\]@\[\033[01;31m\]\h\[\033[00;34m\]{\[\033[01;34m\]\w\[\033[00;34m\]}\[\033[01;32m\]:\[\033[00m\]'
 
-check_config() {
-   cat $1 | sed -e '/^\s*#/d' | sed '/^\s*$/d' | ccze -m ansi
-}
 
 welcome() {
     #------------------------------------------
